@@ -9,15 +9,14 @@
         Cadastro de Materiais
         <form action="inserir.php" method="POST">
             <div class="form-adiciona">
-                Digite a quantidade <input type="number" name="quantidade" />
-                Digite o comprimento (x) <input type="number" name="comprimento" />
-                Digite a altura (y) <input type="number" name="altura" />
-                Digite a chapa <input type="text" name="chapa" />   
-               
-                <input type="button" class="clonaLinha" value="Adicionar linha" />
-                <input type="button" class="removerLinha" value="Remover linha" disabled/>
+                    Digite a quantidade <input type="number" name="quantidade" />
+                    Digite o comprimento (x) <input type="number" name="comprimento" />
+                    Digite a altura (y) <input type="number" name="altura" />
+                    Digite a chapa <input type="text" name="chapa" />                  
             </div>
-                <input type="submit" class="enviaDados" value="Enviar" />
+                <input type="button" class="clona-linha" value="Adicionar linha" />
+                <input type="button" class="remove-linha" value="Remover linha" />    
+                <input type="submit" class="envia-dados" value="Enviar" />
         </form>
     </pre>
 
@@ -25,20 +24,15 @@
         var clonarTabela = document.querySelector(".form-adiciona");
 
         clonarTabela.addEventListener("click", function(event) {
-            event.target.parentNode.classList.add();
-            console.log(clonarTabela);
+            event.target.classList.add(".form-adiciona");
+            console.log(clonarTabela)
         });
     </script>
     <script>
-        var removeTabela = document.querySelector(".removerLinha");
+        var removeTabela = document.querySelector(".remove-linha");
 
         removeTabela.addEventListener("click", function(event) {
-            event.target.parentNode.classList.add("fadeOut");
-
-            setTimeout(function() {
-                event.target.parentNode.remove();
-            }, 500);
-
+            event.target.parentNode.remove();
         });
     </script>
 
