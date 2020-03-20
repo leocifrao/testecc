@@ -15,9 +15,9 @@
                 Digite a chapa <input type="text" name="chapa" />   
                
                 <input type="button" class="clonaLinha" value="Adicionar linha" />
-                <input type="button" class="removerLinha" value="Remover linha" />
-                <input type="submit" class="enviaDados" value="Enviar" />
+                <input type="button" class="removerLinha" value="Remover linha" disabled/>
             </div>
+                <input type="submit" class="enviaDados" value="Enviar" />
         </form>
     </pre>
 
@@ -25,7 +25,7 @@
         var clonarTabela = document.querySelector(".form-adiciona");
 
         clonarTabela.addEventListener("click", function(event) {
-            event.target.parentNode.classList.add(".clonaLinha");
+            event.target.parentNode.classList.add();
             console.log(clonarTabela);
         });
     </script>
