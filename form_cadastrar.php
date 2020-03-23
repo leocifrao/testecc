@@ -25,7 +25,7 @@
 
     <script>
         //clonar linha
-        var clonaTabela = document.querySelector(".clona-linha")
+        var clonaTabela = document.querySelector(".clona-linha");
 
         clonaTabela.addEventListener("click", function() {
             var seuNode = document.getElementById('tabela-padrao');
