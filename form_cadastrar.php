@@ -14,7 +14,7 @@
             <input type="number" placeholder="Digite o comprimento (x)" name="comprimento" />
             <input type="number" placeholder="Digite a altura (y)" name="altura" />
             <input type="text" placeholder="Digite a chapa" name="chapa" />
-        
+
             <input type="button" class="clona-linha" style="border-color: blue" value="Adicionar linha" />
             <input type="button" class="remove-linha" style="border-color: red" value="Remover linha" />
             <input type="submit" class="envia-dados" style="border-color: green" value="Enviar" />
@@ -25,11 +25,9 @@
 
     <script>
         //clonar linha
-        var clonaTabela = document.querySelector(".clona-linha");
+        var clonaTabela = document.querySelector(".clona-linha").addEventListener("click", function() {
 
-        clonaTabela.addEventListener("click", function() {
-            var seuNode = document.getElementById('tabela-padrao');
-            var clone = seuNode.cloneNode(true);
+            var clone = document.getElementById('tabela-padrao').cloneNode(true);
             document.body.appendChild(clone);
         });
     </script>
